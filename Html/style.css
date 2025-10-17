@@ -1,0 +1,264 @@
+/* ======== GLOBAL VARIABLES ======== */
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --border-glow: rgba(0, 170, 255, 0.6);
+    --font-main: 'Segoe UI', sans-serif;
+}
+
+/* ======== RESET ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-gradient);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* ======== HERO / HOME ======== */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero-logo {
+    width: 180px;
+    border-radius: 15px;
+    animation: glow 3s infinite alternate;
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* ======== SECTIONS ======== */
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* ======== TECHNOLOGIES ======== */
+.tech-icons i {
+    font-size: 3rem;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* ======== SERVICES ======== */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-glow);
+    padding: 2rem;
+    width: 250px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--border-glow);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ======== BUTTONS ======== */
+.btn-primary {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: var(--primary-color);
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #008ecc;
+}
+
+/* ======== ABOUT PAGE ======== */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid var(--border-glow);
+    backdrop-filter: blur(10px);
+}
+
+.about-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ======== PORTFOLIO ======== */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-glow);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* ======== CONTACT PAGE ======== */
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid var(--border-glow);
+    backdrop-filter: blur(10px);
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background: #008ecc;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ======== ANIMATIONS ======== */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+    to {
+        box-shadow: 0 0 30px var(--primary-color);
+    }
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}

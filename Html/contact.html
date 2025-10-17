@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hepizen</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">Hepizen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner" style="padding: 80px 3% 50px; background: linear-gradient(135deg, #00d1ff33, #00ffaa22); text-align:center;">
+            <h1 class="glow-text" style="font-size: 2.5rem;">Get in Touch</h1>
+            <p style="color:#ccc; max-width:700px; margin:auto;">
+                We’d love to hear from you. Whether it’s a project inquiry or a casual hello, let’s talk!
+            </p>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section style="padding: 60px 5%; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; max-width:1100px; margin:auto;">
+            
+            <!-- Contact Form -->
+            <div style="background:rgba(255,255,255,0.05); padding:30px; border-radius:15px; box-shadow:0 0 20px rgba(0,0,0,0.3);">
+                <h2 class="glow-text" style="margin-bottom:20px;">Send us a Message</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:none;">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:none;">
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:none;"></textarea>
+                    
+                    <button type="submit" style="background:#00d1ff; color:#000; padding:12px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; width:100%;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h2 class="glow-text">Contact Information</h2>
+                <p style="margin-top:10px; line-height:1.8;">
+                    <strong>Email :</strong> hepizencreations@gmail.com<br>
+                    <strong>Phone :</strong> +91 <br>
+                    <strong>Linkedin :</strong> Hepizen creation <br>
+                    <strong>Instagram :</strong> hepizen_creations
+                </p>
+
+                <div style="margin-top:20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hepizen. All Rights Reserved</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="script.js"></script>
+
+</html>
